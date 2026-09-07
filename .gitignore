@@ -4,10 +4,7 @@
 PRE_02_mapreduce/data/input/*
 PRE_02_mapreduce/data/output/*
 PRE_03_limpieza/data/clean/*
-PRE_04_analisis_flota_conductores_pandas/data/output/*
-PRE_04_analisis_flota_conductores_pandas/data/plots/*
-PRE_05_analisis_flota_conductores_chatgpt/data/output/*
-PRE_05_analisis_flota_conductores_chatgpt/data/plots/*
+
 
 
 
