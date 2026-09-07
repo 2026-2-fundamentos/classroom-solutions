@@ -1,3 +1,5 @@
+import os
+
 import pandas as pd
 
 INPUT_FILE = "PRE_03_limpieza/data/raw/ventas.csv"
@@ -218,6 +220,9 @@ def make_replacements(series, replacements):
 
 
 def main():
+
+    if not os.path.exists("PRE_03_limpieza/data/clean/"):
+        os.mkdir("PRE_03_limpieza/data/clean/")
 
     df = pd.read_csv(INPUT_FILE)
 
