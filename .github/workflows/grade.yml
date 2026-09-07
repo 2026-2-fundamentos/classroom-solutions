@@ -98,7 +98,7 @@ jobs:
               print("=" * 70)
 
               source_directory = activity / "src"
-              tests_directory = activity / "test_src"
+              tests_directory = activity / "tests"
 
               environment = os.environ.copy()
               current_pythonpath = environment.get("PYTHONPATH", "")
