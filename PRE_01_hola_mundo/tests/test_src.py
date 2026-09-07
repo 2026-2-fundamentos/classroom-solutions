@@ -1,5 +1,3 @@
-"""Autograding script."""
-
 from ..src.pregunta_01 import pregunta_01
 from ..src.pregunta_02 import pregunta_02
 
