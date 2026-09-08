@@ -1,4 +1,6 @@
-pytest
-pandas
-matplotlib
+folium
 ipykernel
+matplotlib
+networkx
+pandas
+pytest
