@@ -230,3 +230,4 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
+PRE_05_anonimizacion/data/anonymized.csv
