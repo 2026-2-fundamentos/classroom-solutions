@@ -2,5 +2,6 @@ folium
 ipykernel
 matplotlib
 networkx
+nicegui
 pandas
 pytest
