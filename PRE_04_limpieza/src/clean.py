@@ -2,8 +2,8 @@ import os
 
 import pandas as pd
 
-INPUT_FILE = "PRE_03_limpieza/data/raw/ventas.csv"
-OUTPUT_FILE = "PRE_03_limpieza/data/clean/ventas.csv"
+INPUT_FILE = "PRE_04_limpieza/data/raw/ventas.csv"
+OUTPUT_FILE = "PRE_04_limpieza/data/clean/ventas.csv"
 
 
 SUPPLIER_REPLACEMENTS = {
@@ -221,8 +221,8 @@ def make_replacements(series, replacements):
 
 def main():
 
-    if not os.path.exists("PRE_03_limpieza/data/clean/"):
-        os.mkdir("PRE_03_limpieza/data/clean/")
+    if not os.path.exists("PRE_04_limpieza/data/clean/"):
+        os.mkdir("PRE_04_limpieza/data/clean/")
 
     df = pd.read_csv(INPUT_FILE)
 

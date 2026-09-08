@@ -4,7 +4,7 @@ import pandas as pd
 
 from ..src.clean import main
 
-OUTPUT_FILE = "PRE_03_limpieza/data/clean/ventas.csv"
+OUTPUT_FILE = "PRE_04_limpieza/data/clean/ventas.csv"
 
 
 def test_01():
