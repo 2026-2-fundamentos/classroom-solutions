@@ -1,7 +1,9 @@
-folium
-ipykernel
-matplotlib
-networkx
-nicegui
-pandas
-pytest
+folium<0.19
+ipykernel<7
+matplotlib<3.8
+networkx<3.3
+nicegui<2
+pandas<2.3
+pytest<9
+pyparsing<3.1
+urllib3<2

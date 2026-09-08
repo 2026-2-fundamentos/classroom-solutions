@@ -1,16 +1,19 @@
-"""Autograding script"""
-
 import json
 import os
 
+from ..src.csv2json import convert_csv_2_json
+
+CSV_FILE = "PRE_03_csv2json/data/drivers.csv"
+JSON_FILE = "PRE_03_csv2json/data/drivers.json"
+
 
 def test_01():
-    """Test app"""
 
-    assert os.path.exists("files/drivers.json")
+    convert_csv_2_json(CSV_FILE)
 
-    # read the json file "drivers.json"
-    with open("files/drivers.json", "r", encoding="utf-8") as f:
+    assert os.path.exists(JSON_FILE)
+
+    with open(JSON_FILE, "r", encoding="utf-8") as f:
         data = json.load(f)
 
     assert len(data) == 34
