@@ -16,21 +16,12 @@ def test_01():
         reducer_fn=reducer,
     )
 
-    #
-    # Retorna error si la carpeta output/ no existe
     if not os.path.exists("PRE_02_mapreduce/data/output/"):
         raise Exception("Output directory does not exist")
 
-    #
-    # Retorna error si el archivo "_SUCCESS" no existe en la
-    # carpeta output/
     if not os.path.exists("PRE_02_mapreduce/data/output/_SUCCESS"):
         raise Exception("Output directory is empty")
 
-    #
-    # Lee el contenido del archivo "part-00000" en la carpeta output/
-    # Cada linea en el archivo esta conformada por una clave un valor,
-    # separados por un tabulador. Asigne pareja a un diccionario
     with open("PRE_02_mapreduce/data/output/part-00000", "r", encoding="utf-8") as f:
         lines = f.readlines()
         result = {}
