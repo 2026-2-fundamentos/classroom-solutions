@@ -4,19 +4,17 @@ import pickle
 from sklearn import datasets  # type: ignore
 from sklearn.metrics import accuracy_score  # type: ignore
 
+FOLDER = "PRE_11_clasificacion_basica_imagenes"
+
 
 def test_01():
 
     digits = datasets.load_digits(return_X_y=True)
     data, target = digits
 
-    assert os.path.exists(
-        "PRE_11_clasificacion_basica_imagenes/data/output/estimator.pkl"
-    )
+    assert os.path.exists(f"{FOLDER}/data/output/estimator.pkl")
 
-    with open(
-        "PRE_11_clasificacion_basica_imagenes/data/output/estimator.pkl", "rb"
-    ) as file:
+    with open(f"{FOLDER}/data/output/estimator.pkl", "rb") as file:
         new_clf = pickle.load(file)
 
     accuracy = accuracy_score(
