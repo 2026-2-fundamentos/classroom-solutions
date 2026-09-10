@@ -12,9 +12,9 @@ def test_01():
     digits = datasets.load_digits(return_X_y=True)
     data, target = digits
 
-    assert os.path.exists(f"{FOLDER}/data/output/estimator.pkl")
+    assert os.path.exists(f"{FOLDER}/submission/estimator.pkl")
 
-    with open(f"{FOLDER}/data/output/estimator.pkl", "rb") as file:
+    with open(f"{FOLDER}/submission/estimator.pkl", "rb") as file:
         new_clf = pickle.load(file)
 
     accuracy = accuracy_score(

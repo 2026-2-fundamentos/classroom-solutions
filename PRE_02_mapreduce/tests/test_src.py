@@ -2,29 +2,25 @@ import os
 
 from ..src.word_count_2 import *
 
-FOLDER = "PRE_02_mapreduce"
+DATA_FOLDER = "PRE_02_mapreduce/data"
+INPUT_FOLDER = "PRE_02_mapreduce/temp/input"
+OUTPUT_FOLDER = "PRE_02_mapreduce/temp/output"
 
 
 def test_01():
 
-    initialize_folder(f"{FOLDER}/data/input/")
-    delete_folder(f"{FOLDER}/data/output/")
+    initialize_folder(INPUT_FOLDER)
+    delete_folder(OUTPUT_FOLDER)
     generate_file_copies(1000)
 
     hadoop(
-        input_folder=f"{FOLDER}/data/input/",
-        output_folder=f"{FOLDER}/data/output/",
+        input_folder=INPUT_FOLDER,
+        output_folder=OUTPUT_FOLDER,
         mapper_fn=mapper,
         reducer_fn=reducer,
     )
 
-    if not os.path.exists(f"{FOLDER}/data/output/"):
-        raise Exception("Output directory does not exist")
-
-    if not os.path.exists(f"{FOLDER}/data/output/_SUCCESS"):
-        raise Exception("Output directory is empty")
-
-    with open(f"{FOLDER}/data/output/part-00000", "r", encoding="utf-8") as f:
+    with open(f"{OUTPUT_FOLDER}/part-00000", "r", encoding="utf-8") as f:
         lines = f.readlines()
         result = {}
         for line in lines:

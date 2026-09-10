@@ -4,7 +4,9 @@ import pickle
 import pandas as pd  # type: ignore
 from sklearn.linear_model import LinearRegression  # type: ignore
 
-df = pd.read_csv("PRE_15_deployment/data/input/house_data.csv")
+FOLDER = "PRE_07_deployment"
+
+df = pd.read_csv(f"{FOLDER}/data/house_data.csv")
 
 features = df[
     [
@@ -23,8 +25,6 @@ target = df[["price"]]
 estimator = LinearRegression()
 estimator.fit(features, target)
 
-if not os.path.exists("PRE_15_deployment/data/output"):
-    os.makedirs("PRE_15_deployment/data/output")
 
-with open("PRE_15_deployment/data/output/house_predictor.pkl", "wb") as file:
+with open(f"{FOLDER}/submission/house_predictor.pkl", "wb") as file:
     pickle.dump(estimator, file)

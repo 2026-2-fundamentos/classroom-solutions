@@ -38,7 +38,7 @@ def index():
     filt_args = {key: [int(args[key])] for key in FEATURES}
     df = pd.DataFrame.from_dict(filt_args)
 
-    with open("PRE_15_deployment/data/output/house_predictor.pkl", "rb") as file:
+    with open("PRE_07_deployment/submission/house_predictor.pkl", "rb") as file:
         loaded_model = pickle.load(file)
 
     prediction = loaded_model.predict(df)

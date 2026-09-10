@@ -6,6 +6,8 @@ from flask import Flask, render_template, request  # type: ignore
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "you-will-never-guess"
 
+FOLDER = "PRE_07_deployment"
+
 
 @app.route("/", methods=["GET", "POST"])
 @app.route("/index", methods=("GET", "POST"))
@@ -42,7 +44,7 @@ def index():
 
         df = pd.DataFrame.from_dict(user_values, orient="index").T
 
-        with open("PRE_15_deployment/data/output/house_predictor.pkl", "rb") as file:
+        with open(f"{FOLDER}/submission/house_predictor.pkl", "rb") as file:
             loaded_model = pickle.load(file)
 
         prediction = round(loaded_model.predict(df)[0][0], 2)
