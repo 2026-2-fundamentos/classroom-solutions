@@ -1,0 +1,5 @@
+round_id,strategy,budget_units,used_units,covered_probability,success_probability
+1,naive_distance,6,6,0.39000000000000007,0.28
+1,recommended_initial,6,6,0.5199999999999999,0.384
+2,repeat_initial,6,6,0.22077922077922077,0.14545454545454545
+2,recommended_revised,6,6,0.3798701298701298,0.225974025974026

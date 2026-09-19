@@ -1,0 +1,2 @@
+hospital_id,horizon_days,initial_beds,max_blocks,beds_per_block,lead_time_days,activation_burden_per_block,operating_burden_per_bed_day,shortage_penalty_per_bed_day
+H001,21,100,2,20,4,20,1,10
