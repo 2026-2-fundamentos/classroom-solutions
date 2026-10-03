@@ -1,0 +1,6 @@
+threshold,prioritized_applications,false_negative,false_positive,expected_cost
+0.2,8240,73,6404,7134
+0.3,7279,182,5552,7372
+0.4,5633,403,4127,8157
+0.5,3371,694,2156,9096
+0.6,1594,1018,703,10883

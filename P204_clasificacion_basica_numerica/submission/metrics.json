@@ -1,0 +1,18 @@
+{
+  "test_size": 114,
+  "positive_class": "M",
+  "base_features": [
+    "texture_mean",
+    "compactness_mean"
+  ],
+  "flexible_features": [
+    "texture_mean",
+    "compactness_mean",
+    "texture_mean_squared",
+    "texture_mean_x_compactness_mean"
+  ],
+  "test_auc": {
+    "log\u00edstica base": 0.842,
+    "log\u00edstica flexible": 0.852
+  }
+}

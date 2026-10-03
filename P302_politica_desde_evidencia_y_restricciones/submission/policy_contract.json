@@ -1,0 +1,41 @@
+{
+  "analytical_question": "¿Cómo deben asignarse 40 cupos de tutoría para maximizar la ganancia esperada sin incumplir el mínimo por grado?",
+  "decision_context": "Asignación de cupos de tutoría antes de cada periodo académico.",
+  "decision_cadence": "Una vez por periodo académico, antes de abrir las tutorías.",
+  "response_need": "La asignación debe estar aprobada antes de la matrícula del periodo.",
+  "decision_owner": "Dirección académica",
+  "execution_mode": "Aprobación humana de una recomendación computable.",
+  "selected_policy": {
+    "policy_id": "P1",
+    "policy": "solo_mayor_beneficio",
+    "grade_1_slots": 8,
+    "grade_2_slots": 24,
+    "grade_3_slots": 8
+  },
+  "objective": "Maximizar la ganancia esperada de aprendizaje.",
+  "expected_learning_gain": 5520,
+  "constraints": {
+    "total_slots": 40,
+    "minimum_slots_per_grade": 8
+  },
+  "safeguards": [
+    "No asignar más cupos que la capacidad disponible.",
+    "Garantizar el mínimo de cupos definido para cada grado."
+  ],
+  "exception_and_human_authority": "Escalar a la Dirección académica si cambia la capacidad o si no existe una política factible.",
+  "review_trigger": "Revisar la política si la asistencia por grado es menor a 70%.",
+  "outcome_monitor": "Asistencia por grado y ganancia de aprendizaje observada.",
+  "discarded_policies": [
+    {
+      "policy_id": "P0",
+      "policy": "reparto_igualitario",
+      "reason": "Ofrece menor ganancia esperada que la política seleccionada."
+    },
+    {
+      "policy_id": "P2",
+      "policy": "prioridad_con_piso",
+      "reason": "Ofrece menor ganancia esperada que la política seleccionada."
+    }
+  ],
+  "data_limitation": "Los valores del caso son parámetros hipotéticos de una reducción pedagógica; no son estimaciones publicadas de Project STAR."
+}

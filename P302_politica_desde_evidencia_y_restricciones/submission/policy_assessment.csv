@@ -1,0 +1,4 @@
+policy_id,policy,grade_1_slots,grade_2_slots,grade_3_slots,value_grade_1,value_grade_2,value_grade_3,total_slots,min_slots_per_grade,allocated_slots,expected_learning_gain,capacity_ok,minimum_ok,feasible,decision_status,decision_reason
+P0,reparto_igualitario,14,13,13,120,160,90,40,8,40,4930,True,True,True,descartada,Ofrece menor ganancia esperada que la política seleccionada.
+P1,solo_mayor_beneficio,8,24,8,120,160,90,40,8,40,5520,True,True,True,seleccionada,Maximiza la ganancia esperada entre las políticas factibles.
+P2,prioridad_con_piso,12,20,8,120,160,90,40,8,40,5360,True,True,True,descartada,Ofrece menor ganancia esperada que la política seleccionada.

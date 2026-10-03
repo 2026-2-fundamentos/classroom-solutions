@@ -1,0 +1,10 @@
+elemento,definicion
+tipo_de_decision,respuesta excepcional de búsqueda
+recurrencia,no recurrente; activada por una desaparición
+cadencia,por ronda y cuando aparece nueva evidencia
+plazo_de_respuesta,antes de asignar la siguiente ronda
+accion,asignar hasta seis unidades a celdas priorizadas
+restriccion,capacidad limitada a seis unidades por ronda
+salvaguarda,no descartar celdas tras una búsqueda fallida
+autoridad,comando de búsqueda aprueba y escala el plan
+gatillo_de_revision,fracaso de ronda o evidencia nueva

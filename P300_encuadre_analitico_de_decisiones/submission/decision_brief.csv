@@ -1,0 +1,2 @@
+policy_id,policy,contacts,expected_conversions,expected_net_value,capacity_ok,exposure_ok,decision_owner,review_trigger
+P2,ampliar_a_probabilidad_media,1000,115.0,17700.0,True,True,Responsable comercial,Revisar si la conversión observada cae por debajo de 10%.

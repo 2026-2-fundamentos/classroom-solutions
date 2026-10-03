@@ -1,0 +1,37 @@
+{
+  "datasets": [
+    {
+      "dataset": "invalid_date.csv",
+      "accepted": false,
+      "violations": [
+        "factory_date debe contener fechas válidas."
+      ]
+    },
+    {
+      "dataset": "invalid_duplicate_key.csv",
+      "accepted": false,
+      "violations": [
+        "La llave factory_id-machine_id-factory_date debe ser única."
+      ]
+    },
+    {
+      "dataset": "invalid_negative_production.csv",
+      "accepted": false,
+      "violations": [
+        "daily_units_produced no puede ser negativo."
+      ]
+    },
+    {
+      "dataset": "invalid_schema.csv",
+      "accepted": false,
+      "violations": [
+        "El esquema no coincide con el contrato esperado."
+      ]
+    },
+    {
+      "dataset": "machine_throughput_export.csv",
+      "accepted": true,
+      "violations": []
+    }
+  ]
+}

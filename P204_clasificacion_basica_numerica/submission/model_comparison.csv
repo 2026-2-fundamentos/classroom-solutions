@@ -1,0 +1,3 @@
+model,test_auc,test_accuracy
+logística base,0.842,0.754
+logística flexible,0.852,0.746
